@@ -1,0 +1,97 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 30px;
+}
+
+/* Conteúdo principal */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Título principal */
+h1 {
+    color: #2563eb;
+    margin-bottom: 5px;
+}
+
+h3 {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Seções */
+section {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+
+/* Subtítulos */
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #1e40af;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 5px;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #2563eb;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f2f6ff;
+}
+
+/* Hover na tabela */
+tr:hover {
+    background: #eaf1ff;
+}
+
+/* Footer */
+footer {
+    max-width: 1000px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+footer a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #1e40af;
+    text-decoration: underline;
+}
