@@ -5,13 +5,44 @@
     box-sizing: border-box;
 }
 
+/* Variáveis do tema claro */
+:root {
+    --bg: #f4f6f9;
+    --text: #333;
+    --card: #ffffff;
+    --title: #2563eb;
+    --subtitle: #1e40af;
+    --border: #eee;
+
+    --table-row: #f2f6ff;
+    --table-hover: #eaf1ff;
+
+    --footer: #1e293b;
+}
+
+/* Variáveis do tema escuro */
+body.dark {
+    --bg: #0f172a;
+    --text: #e2e8f0;
+    --card: #1e293b;
+    --title: #60a5fa;
+    --subtitle: #93c5fd;
+    --border: #334155;
+
+    --table-row: #273549;
+    --table-hover: #334155;
+
+    --footer: #020617;
+}
+
 /* Corpo */
 body {
     font-family: 'Segoe UI', Tahoma, sans-serif;
-    background: #f4f6f9;
-    color: #333;
+    background: var(--bg);
+    color: var(--text);
     line-height: 1.6;
     padding: 30px;
+    transition: 0.3s;
 }
 
 /* Conteúdo principal */
@@ -22,7 +53,7 @@ main {
 
 /* Título principal */
 h1 {
-    color: #2563eb;
+    color: var(--title);
     margin-bottom: 5px;
 }
 
@@ -33,7 +64,7 @@ h3 {
 
 /* Seções */
 section {
-    background: white;
+    background: var(--card);
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -44,8 +75,8 @@ section {
 h2 {
     margin-top: 20px;
     margin-bottom: 10px;
-    color: #1e40af;
-    border-bottom: 2px solid #2563eb;
+    color: var(--subtitle);
+    border-bottom: 2px solid var(--title);
     padding-bottom: 5px;
 }
 
@@ -58,24 +89,36 @@ table {
     border-radius: 10px;
 }
 
-th, td {
-    border: 1px solid #ddd;
+th,
+td {
+    border: 1px solid var(--border);
     padding: 12px;
     text-align: left;
 }
 
 th {
-    background: #2563eb;
+    background: var(--title);
     color: white;
 }
 
 tr:nth-child(even) {
-    background: #f2f6ff;
+    background: var(--table-row);
 }
 
-/* Hover na tabela */
 tr:hover {
-    background: #eaf1ff;
+    background: var(--table-hover);
+}
+
+/* Links */
+a {
+    color: var(--title);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--subtitle);
+    text-decoration: underline;
 }
 
 /* Footer */
@@ -83,15 +126,34 @@ footer {
     max-width: 1000px;
     margin: 25px auto;
     text-align: center;
+    background: var(--footer);
+    padding: 20px;
+    border-radius: 15px;
 }
 
 footer a {
-    color: #2563eb;
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
 footer a:hover {
-    color: #1e40af;
+    color: var(--subtitle);
     text-decoration: underline;
+}
+
+/* Botão de troca de tema */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 1000;
 }
