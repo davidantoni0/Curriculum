@@ -3,34 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário de Cadastro</title>
 </head>
 <body>
-    <form>
-        <fieldset>
-            <legend>Dados Pessoais</legend><label>Nome: <input type="text"></label><br><label>Endereço: <input
-                    type="text"></label><br><label>Cidade: <input type="text"></label><br><label>Estado: <select>
-                    <option selected="">Rio de Janeiro</option>
-                    <option>São Paulo</option>
-                    <option>Minas Gerais</option>
-                    <option>Bahia</option>
-                    <option>Rio Grande do Sul</option>
-                    <option>Pernambuco</option>
-                    <option>Ceará</option>
-                </select></label>
-        </fieldset>
-        <fieldset>
-            <legend>Dados Profissionais</legend><label>Natureza do Cargo: <select>
-                    <option selected="">Gerência</option>
-                    <option>Financeiro</option>
-                    <option>Recepção</option>
-                    <option>Administrativo</option>
-                    <option>Jurídico</option>
-                </select></label><br><br>Área de Interesse:<br><label><input type="checkbox">
-                Computação</label><br><label><input type="checkbox"> Biologia</label><br><label><input type="checkbox"> Meio
-                Ambiente</label><br><label><input type="checkbox"> Engenharia</label><br><label><input type="checkbox">
-                História</label><br><br><label>Mini Currículo:<br><textarea rows="3" cols="40"></textarea></label>
-        </fieldset><br><button type="submit">Enviar</button> <button type="reset">Limpar</button>
-    </form>
+
+<form action="#" method="post">
+
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome"><br>
+
+
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco"><br>
+
+
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade"><br>
+
+
+
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado">
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP">São Paulo</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="BA">Bahia</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="PE">Pernambuco</option>
+                <option value="CE">Ceará</option>
+            </select>
+
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Dados Profissionais</legend>
+        
+            <label for="cargo">Natureza do Cargo:</label>
+            <select id="cargo" name="cargo">
+                <option value="gerencia">Gerência</option>
+                <option value="financeiro">Financeiro</option>
+                <option value="recepcao">Recepção</option>
+                <option value="administrativo">Administrativo</option>
+                <option value="juridico">Jurídico</option>
+            </select><br><br>
+
+
+        <label>Área de Interesse:</label><br>
+
+        <label>
+            <input type="checkbox" name="interesse" value="computacao">
+            Computação
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="interesse" value="biologia">
+            Biologia
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="interesse" value="meio_ambiente">
+            Meio Ambiente
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="interesse" value="engenharia">
+            Engenharia
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="interesse" value="historia">
+            História
+        </label>
+
+        <p>
+            <label for="curriculo">Mini Currículo:</label><br>
+            <textarea id="curriculo" name="curriculo" rows="4" cols="40"></textarea>
+        </p>
+
+    </fieldset>
+
+
+    <button type="submit">Enviar</button>
+    <button type="reset">Limpar</button>
+
+
+</form>
+
 </body>
 </html>
