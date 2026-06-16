@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f4f6f9;
+    --text: #333;
+    --card: #ffffff;
+    --title: #2563eb;
+    --subtitle: #1e40af;
+    --border: #eee;
+
+    --table-row: #f2f6ff;
+    --table-hover: #eaf1ff;
+
+    --footer: #1e293b;
+}
+
+body.dark {
+    --bg: #0f172a;
+    --text: #e2e8f0;
+    --card: #1e293b;
+    --title: #60a5fa;
+    --subtitle: #93c5fd;
+    --border: #334155;
+
+    --table-row: #273549;
+    --table-hover: #334155;
+
+    --footer: #020617;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 30px;
+    transition: 0.3s;
+}
