@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f4f6f9;
+    --text: #333;
+    --card: #ffffff;
+    --title: #2563eb;
+    --subtitle: #1e40af;
+    --border: #eee;
+
+    --table-row: #f2f6ff;
+    --table-hover: #eaf1ff;
+
+    --footer: #1e293b;
+}
+
+body.dark {
+    --bg: #0f172a;
+    --text: #e2e8f0;
+    --card: #1e293b;
+    --title: #60a5fa;
+    --subtitle: #93c5fd;
+    --border: #334155;
+
+    --table-row: #273549;
+    --table-hover: #334155;
+
+    --footer: #020617;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+h1 {
+    color: var(--title);
+    margin-bottom: 5px;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--subtitle);
+    border-bottom: 2px solid var(--title);
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: var(--subtitle);
+    margin-bottom: 20px;
+}
+
+a {
+    color: var(--title);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--subtitle);
+    text-decoration: underline;
+}
+
+/* Botão de tema */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    z-index: 1000;
+}
