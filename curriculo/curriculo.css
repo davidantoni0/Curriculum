@@ -3,7 +3,6 @@ main {
     margin: 40px auto;
 }
 
-/* Container principal */
 .curriculo-informacoes {
     display: flex;
     gap: 30px;
@@ -13,7 +12,6 @@ main {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Foto */
 .espaco-foto {
     flex: 1;
     display: flex;
@@ -29,30 +27,10 @@ main {
     border: 5px solid #2563eb;
 }
 
-/* Informações pessoais */
 .informacoes {
     flex: 3;
 }
 
-.informacoes h1 {
-    color: var(--title);
-    margin-bottom: 5px;
-}
-
-.informacoes h3 {
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.informacoes h2 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: var(--subtitle);
-    border-bottom: 2px solid var(--title);
-    padding-bottom: 5px;
-}
-
-/* Segunda seção */
 .curriculo-habilidades {
     background: var(--card);
     padding: 30px;
@@ -61,15 +39,8 @@ main {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.curriculo-habilidades h2 {
-    color: var(--subtitle);
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
 .curriculo-habilidades h3 {
     margin-top: 15px;
-    color: #444;
 }
 
 .curriculo-habilidades ul {
@@ -80,19 +51,6 @@ main {
     margin-bottom: 8px;
 }
 
-/* Links */
-a {
-    color: #2563eb;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-a:hover {
-    color: #1e40af;
-    text-decoration: underline;
-}
-
-/* Rodapé */
 footer {
     max-width: 1100px;
     margin: 25px auto;
@@ -122,7 +80,6 @@ footer img {
     filter: invert(1);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .curriculo-informacoes {
         flex-direction: column;
@@ -138,18 +95,4 @@ footer img {
         flex-direction: column;
         align-items: center;
     }
-}
-
-#theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    background: #2563eb;
-    color: white;
-    font-weight: bold;
-    z-index: 1000;
 }

@@ -40,3 +40,47 @@ body {
     padding: 30px;
     transition: 0.3s;
 }
+
+h1 {
+    color: var(--title);
+    margin-bottom: 5px;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--subtitle);
+    border-bottom: 2px solid var(--title);
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: var(--subtitle);
+    margin-bottom: 20px;
+}
+
+a {
+    color: var(--title);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--subtitle);
+    text-decoration: underline;
+}
+
+/* Botão de tema */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    z-index: 1000;
+}

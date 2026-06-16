@@ -1,21 +1,8 @@
-/* Conteúdo principal */
 main {
     max-width: 1000px;
     margin: 0 auto;
 }
 
-/* Título principal */
-h1 {
-    color: var(--title);
-    margin-bottom: 5px;
-}
-
-h3 {
-    color: #666;
-    margin-bottom: 20px;
-}
-
-/* Seções */
 section {
     background: var(--card);
     padding: 25px;
@@ -24,16 +11,6 @@ section {
     margin-bottom: 25px;
 }
 
-/* Subtítulos */
-h2 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: var(--subtitle);
-    border-bottom: 2px solid var(--title);
-    padding-bottom: 5px;
-}
-
-/* Tabelas */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -62,19 +39,6 @@ tr:hover {
     background: var(--table-hover);
 }
 
-/* Links */
-a {
-    color: var(--title);
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-a:hover {
-    color: var(--subtitle);
-    text-decoration: underline;
-}
-
-/* Footer */
 footer {
     max-width: 1000px;
     margin: 25px auto;
@@ -93,20 +57,4 @@ footer a {
 footer a:hover {
     color: var(--subtitle);
     text-decoration: underline;
-}
-
-/* Botão de troca de tema */
-#theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    background: #2563eb;
-    color: white;
-    font-weight: bold;
-    transition: 0.3s;
-    z-index: 1000;
 }
