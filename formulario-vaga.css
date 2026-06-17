@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(30deg,#060624,#060624, #060624,#d3d3d3);
+    min-height: auto;
+}
+form{
+    margin: 10px;
+    min-width: 400px;
+    width: 20%;
+    padding: 10px;
+    background-color: rgb(3, 3, 87);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5%;
+    box-shadow: 0 500px 500px rgba(0,0,0,0.1);
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+input, select, textarea, ::placeholder{
+    background-color: rgb(48, 48, 48);
+    color: rgb(180, 175, 175);
+    border-radius: 4px;
+}
+#nome, #endereco, #cidade{
+    min-height: 30px;
+}
+legend{
+    color: greenyellow;
+    text-shadow: 0 0 5px greenyellow, 0 0 15px greenyellow, 0 0 30px greenyellow;
+    border: 1px solid yellowgreen;
+    border-radius: 4px;
+}
