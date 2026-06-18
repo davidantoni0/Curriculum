@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    color: #c7d6fe;
+    background: linear-gradient(30deg,#060624,#060624, #060624,#1e1e57);
+    height: 100vh;
+}
+form{
+    max-height: fit-content;
+    margin: 10%;
+    min-width: 400px;
+    min-height: fit-content;
+    width: 20%;
+    padding: 10px;
+    background-color: #061741;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
+    
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border-color: #2a3e6c;
+    border-radius: 20px;
+    
+}
+input, select, textarea, ::placeholder{
+    background-color: #030c2b;
+    color: #abb7da;
+    border-radius: 8px;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+#nome, #endereco, #cidade, select{
+    min-height: 30px;
+}
+label{
+    margin-left: 20px;
+    font-size: small;
+}
+legend{
+    margin-left: 20px;
+    color: #0BEF71ff;
+    text-shadow: 0 0 5px #0BEF71ff, 0 0 15px #0BEF71ff, 0 0 30px #0BEF71ff;
+    border: 1px solid #0BEF71ff;
+    border-radius: 10px;
+}
+
+section{
+    height: 10%;
+}
+
+button{
+    height: 50px;
+    width: 70px;
+    border-radius: 20px;
+    margin-left: 20px;
+    
+}
+textarea{
+    width: 90%;
+}
+.enviar{
+    background-color: #0BEF71ff;
+    box-shadow: 0 0 1px #0BEF71ff, 0 0 1px #0BEF71ff, 0 0 30px #0BEF71ff;;
+    border: 0;
+}
