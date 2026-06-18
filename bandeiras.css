@@ -1,0 +1,160 @@
+body{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Franca, .Alemanha, .Colombia, .Japao, .Emirados, .Brasil, .Suica, .Jordania,.TrinidadTobago{
+display: flex;
+height: 300px;
+width: 400px;
+border-radius: 25px;
+overflow: hidden;
+box-shadow: 5px 5px 5px 5px black;
+}
+.Alemanha, .Colombia{
+    flex-direction: column;
+}
+.Japao{
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+.Suica{
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+
+}
+.Jordania{
+    overflow: hidden;
+    position: relative;
+}
+.fx-azul, .fx-branca, .fx-vermelha, .fx-vermelha-jordania, .fx-preta, .fx-amarela, .fx-verde {
+    flex: 1;
+}
+.fx-vermelha-suica {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.fx-azul{
+    background-color: blue;
+}
+.fx-branca, .fx-branca-suica, .fx-branca-suica-2{
+    background-color: white;
+}
+.fx-branca-suica {
+    width: 40px;
+    height: 150px;
+
+} 
+
+.fx-branca-suica-2{
+    position: absolute;
+    width: 150px;
+    height: 40px;
+}
+.fx-vermelha,.fx-vermelha-suica, .fx-vermelha-jordania{
+    background-color: red;
+}
+.fx-vermelha{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.fx-vermelha-jordania{
+    height: 300px;
+    width: 400px;
+    clip-path: polygon(20% 0%, 70% 50%, 20% 100%);
+    position: absolute;
+    left: -80px;
+}
+.fx-preta, .fx-preta-TrinidadTobago{
+    background-color: black;
+}
+.fx-preta-TrinidadTobago{
+    width: 500px;
+    height: 40px;
+    border: 10px solid white;
+    position: absolute;
+    transform: rotate(35deg);
+}
+.fx-amarela{
+    background-color: yellow;
+}
+.fx-Colom-amarela{
+    flex:2;
+    background-color: yellow;
+}
+.esfera-vermelha{
+    background-color: red;
+    min-height: 150px;
+    min-width: 150px;
+    border-radius: 500px;
+}
+.esfera-azul{
+    background-color: blue;
+    height: 150px;
+    width: 150px;
+    border-radius: 500px;
+    position: absolute;
+    overflow: hidden;
+}
+.fx-brasil{
+    height: 400px;
+    width: 400px;
+    border: 10px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    left: -200px;
+
+}
+.box-2{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+.fx-verde{
+    background-color: rgb(76, 150, 76);
+}
+.box-verde{
+    background-color: green;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fx-Bra-amarela{
+    height: 300px;
+    width: 300px;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scaleY(.6) scaleX(.8) rotate(45deg) ;
+    position: relative;
+}
+.star {
+    position: absolute;
+    display: inline-block;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    top: 100px;
+    left: 100px;
+  }
