@@ -1,0 +1,285 @@
+<html lang="pt-BR"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulário de Vaga — alvo CSS (Aula 04)</title>
+    <!--
+      GABARITO da atividade da Aula 04 (CSS na Prática).
+      → O HTML abaixo é EXATAMENTE o mesmo do exercício (mesma estrutura da Aula 02).
+      → Toda a estilização vive no <style>. Nenhum style inline, nenhuma mudança de marcação.
+      Fluxo: abrir no Chrome → screenshot do <form> → substituir public/slides/photos/formulario-vaga-css.png
+      Mantido FORA de public/ de propósito (o gabarito não pode vazar por URL/DevTools).
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@600;700&amp;display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --navy-900:#060B1E;
+        --navy-800:#0B1538;
+        --navy-700:#122150;
+        --field-bg:rgba(6,11,30,.55);
+        --line:rgba(120,150,210,.28);
+        --ink:#EAF2FF;
+        --muted:#92A6D2;
+        --cyan:#55C8E6;
+        --cyan-bright:#7FE8FF;
+        --green:#39FF14;          /* verde fluorescente */
+        --green-soft:#8DFFB0;
+        --glow-green:0 0 0 3px rgba(57,255,20,.18), 0 0 22px rgba(57,255,20,.35);
+        --glow-cyan:0 0 18px rgba(85,200,230,.45);
+      }
+    
+      *{ box-sizing:border-box; }
+    
+      body{
+        margin:0;
+        min-height:100vh;
+        display:grid;
+        place-items:center;
+        padding:56px 24px;
+        font-family:"Hanken Grotesk",system-ui,sans-serif;
+        color:var(--ink);
+        background:
+          radial-gradient(900px 600px at 12% -10%, rgba(57,255,20,.10), transparent 60%),
+          radial-gradient(900px 700px at 100% 0%, rgba(85,200,230,.16), transparent 55%),
+          radial-gradient(1000px 800px at 50% 120%, rgba(27,58,138,.55), transparent 60%),
+          linear-gradient(160deg, var(--navy-800), var(--navy-900));
+      }
+    
+      /* ---- cartão do formulário (glass + brilho neon) ---- */
+      form{
+        width:min(560px,100%);
+        display:flex;
+        flex-direction:column;
+        gap:26px;
+        padding:38px;
+        border-radius:26px;
+        background:linear-gradient(180deg, rgba(18,33,80,.55), rgba(8,14,40,.55));
+        border:1px solid rgba(85,200,230,.22);
+        box-shadow:
+          0 24px 70px rgba(0,0,0,.55),
+          inset 0 1px 0 rgba(255,255,255,.06),
+          0 0 60px rgba(57,255,20,.06);
+        backdrop-filter:blur(8px);
+      }
+    
+      /* ---- agrupamentos ---- */
+      fieldset{
+        margin:0;
+        border:1.5px solid var(--line);
+        border-radius:18px;
+        padding:24px 22px 26px;
+        background:rgba(255,255,255,.018);
+        display:flex;
+        flex-direction:column;
+        gap:14px;
+      }
+      legend{
+        font-family:"JetBrains Mono",monospace;
+        font-weight:700;
+        font-size:14px;
+        letter-spacing:.12em;
+        text-transform:uppercase;
+        color:var(--green);
+        padding:4px 12px;
+        border:1px solid rgba(57,255,20,.45);
+        border-radius:999px;
+        background:rgba(57,255,20,.06);
+        text-shadow:0 0 14px rgba(57,255,20,.6);
+      }
+    
+      /* ---- rótulos e campos ---- */
+      label{
+        display:block;
+        font-size:15px;
+        font-weight:600;
+        color:#C7D6FF;
+        margin-bottom:-6px;
+      }
+      input[type="text"],
+      select,
+      textarea{
+        width:100%;
+        padding:14px 16px;
+        font:inherit;
+        font-size:16px;
+        color:var(--ink);
+        background:var(--field-bg);
+        border:1.5px solid var(--line);
+        border-radius:12px;
+        outline:none;
+        transition:border-color .2s, box-shadow .2s, background .2s;
+      }
+      ::placeholder{ color:var(--muted); }
+    
+      /* seta custom do select */
+      select{
+        appearance:none;
+        -webkit-appearance:none;
+        background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%2355C8E6' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat:no-repeat;
+        background-position:right 18px center;
+        padding-right:44px;
+        cursor:pointer;
+      }
+      option{ color:#0B1538; }
+    
+      textarea{
+        min-height:120px;
+        resize:vertical;
+      }
+    
+      /* foco com brilho verde neon */
+      input[type="text"]:focus,
+      select:focus,
+      textarea:focus{
+        border-color:var(--green);
+        background:rgba(57,255,20,.04);
+        box-shadow:var(--glow-green);
+      }
+    
+      /* ---- checkboxes ---- */
+      fieldset > label:has(input[type="checkbox"]){
+        display:flex;
+        align-items:center;
+        gap:12px;
+        margin:0;
+        font-weight:500;
+        color:var(--ink);
+        cursor:pointer;
+      }
+      input[type="checkbox"]{
+        appearance:none;
+        -webkit-appearance:none;
+        width:22px;
+        height:22px;
+        margin:0;
+        border:2px solid var(--line);
+        border-radius:7px;
+        background:var(--field-bg);
+        display:grid;
+        place-content:center;
+        cursor:pointer;
+        transition:border-color .15s, box-shadow .15s, background .15s;
+      }
+      input[type="checkbox"]::before{
+        content:"";
+        width:11px;
+        height:11px;
+        border-radius:3px;
+        transform:scale(0);
+        transition:transform .12s ease-out;
+        background:var(--green);
+        box-shadow:0 0 12px rgba(57,255,20,.9);
+      }
+      input[type="checkbox"]:checked{
+        border-color:var(--green);
+      }
+      input[type="checkbox"]:checked::before{ transform:scale(1); }
+      input[type="checkbox"]:focus-visible{ box-shadow:var(--glow-green); }
+    
+      /* título "Área de Interesse:" (não tem 'for', é só rótulo do grupo) */
+      .grupo-titulo{
+        margin-bottom:0;
+        color:var(--muted);
+        font-weight:600;
+      }
+    
+      /* ---- botões ---- */
+      .acoes{
+        display:flex;
+        gap:16px;
+        margin-top:4px;
+      }
+      button{
+        font:inherit;
+        font-weight:800;
+        font-size:16px;
+        letter-spacing:.02em;
+        padding:14px 34px;
+        border-radius:999px;
+        cursor:pointer;
+        transition:transform .15s, box-shadow .2s, background .2s, color .2s;
+      }
+      /* Enviar — verde fluorescente com brilho */
+      button[type="submit"]{
+        border:0;
+        color:#05210C;
+        background:linear-gradient(135deg, var(--green), #00E5A0);
+        box-shadow:0 0 26px rgba(57,255,20,.5), inset 0 1px 0 rgba(255,255,255,.4);
+      }
+      button[type="submit"]:hover{
+        transform:translateY(-2px);
+        box-shadow:0 0 38px rgba(57,255,20,.75), inset 0 1px 0 rgba(255,255,255,.5);
+      }
+      /* Limpar — contorno ciano neon */
+      button[type="reset"]{
+        background:transparent;
+        border:2px solid var(--cyan);
+        color:var(--cyan-bright);
+        text-shadow:0 0 10px rgba(85,200,230,.5);
+      }
+      button[type="reset"]:hover{
+        transform:translateY(-2px);
+        background:rgba(85,200,230,.12);
+        box-shadow:var(--glow-cyan);
+      }
+    </style>
+    </head>
+    <body>
+    
+      <!-- ====== MESMA ESTRUTURA HTML DO EXERCÍCIO — só o CSS muda ====== -->
+      <form action="/vaga">
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+    
+          <label for="nome">Nome</label>
+          <input id="nome" type="text" placeholder="Seu nome completo">
+    
+          <label for="endereco">Endereço</label>
+          <input id="endereco" type="text" placeholder="Rua, número">
+    
+          <label for="cidade">Cidade</label>
+          <input id="cidade" type="text" placeholder="Sua cidade">
+    
+          <label for="estado">Estado</label>
+          <select id="estado">
+            <option>Rio de Janeiro</option>
+            <option>São Paulo</option>
+            <option>Minas Gerais</option>
+            <option>Espírito Santo</option>
+            <option>Bahia</option>
+          </select>
+        </fieldset>
+    
+        <fieldset>
+          <legend>Dados Profissionais</legend>
+    
+          <label for="cargo">Natureza do Cargo</label>
+          <select id="cargo">
+            <option>Gerência</option>
+            <option>Técnico</option>
+            <option>Estágio</option>
+            <option>Operacional</option>
+          </select>
+    
+          <label class="grupo-titulo">Área de Interesse:</label>
+          <label><input type="checkbox" name="area" value="computacao"> Computação</label>
+          <label><input type="checkbox" name="area" value="biologia"> Biologia</label>
+          <label><input type="checkbox" name="area" value="meio-ambiente"> Meio Ambiente</label>
+          <label><input type="checkbox" name="area" value="engenharia"> Engenharia</label>
+          <label><input type="checkbox" name="area" value="historia"> História</label>
+    
+          <label for="curriculo">Mini Currículo</label>
+          <textarea id="curriculo" placeholder="Fale um pouco sobre você…"></textarea>
+        </fieldset>
+    
+        <div class="acoes">
+          <button type="submit">Enviar</button>
+          <button type="reset">Limpar</button>
+        </div>
+      </form>
+    
+    
+    
+    </body></html>
