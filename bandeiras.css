@@ -10,7 +10,7 @@ section{
     align-items: center;
 }
 
-.Franca, .Alemanha, .Colombia, .Japao, .Emirados, .Brasil, .Suica, .Jordania,.TrinidadTobago{
+.Franca, .Alemanha, .Colombia, .Japao, .Emirados, .Brasil, .Suica, .Jordania,.TrinidadTobago, .Turquia, .Grecia, .Chile, .EstadosUnidos{
 display: flex;
 height: 300px;
 width: 400px;
@@ -18,7 +18,7 @@ border-radius: 25px;
 overflow: hidden;
 box-shadow: 5px 5px 5px 5px black;
 }
-.Alemanha, .Colombia{
+.Alemanha, .Colombia, .EstadosUnidos{
     flex-direction: column;
 }
 .Japao{
@@ -33,9 +33,12 @@ box-shadow: 5px 5px 5px 5px black;
     align-items: center;
 
 }
-.Jordania{
-    overflow: hidden;
+.Jordania, .Grecia, .EstadosUnidos{
     position: relative;
+}
+.Turquia{
+    align-items: center;
+    justify-content: center;
 }
 .fx-azul, .fx-branca, .fx-vermelha, .fx-vermelha-jordania, .fx-preta, .fx-amarela, .fx-verde {
     flex: 1;
@@ -48,11 +51,10 @@ box-shadow: 5px 5px 5px 5px black;
     justify-content: center;
     position: relative;
 }
-
-.fx-azul{
+.fx-azul, .esfera-azul, .fx-azul-chile{
     background-color: blue;
 }
-.fx-branca, .fx-branca-suica, .fx-branca-suica-2{
+.fx-branca, .fx-branca-suica, .fx-branca-suica-2, .lua, .cross-grecia1, .cross-grecia2, .box-chile, .fx-branca-eua{
     background-color: white;
 }
 .fx-branca-suica {
@@ -60,16 +62,23 @@ box-shadow: 5px 5px 5px 5px black;
     height: 150px;
 
 } 
-
 .fx-branca-suica-2{
     position: absolute;
     width: 150px;
     height: 40px;
 }
-.fx-vermelha,.fx-vermelha-suica, .fx-vermelha-jordania{
+.fx-vermelha,.fx-vermelha-suica, .fx-vermelha-jordania, .esfera-vermelha, .fx-vermelha-turquia, .eclipse, .fx-vermelha-eua{
     background-color: red;
 }
 .fx-vermelha{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.fx-vermelha-turquia{
+    height: 300px;
+    width: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,21 +101,18 @@ box-shadow: 5px 5px 5px 5px black;
     position: absolute;
     transform: rotate(35deg);
 }
-.fx-amarela{
+.fx-amarela, .fx-Colom-amarela{
     background-color: yellow;
 }
 .fx-Colom-amarela{
     flex:2;
-    background-color: yellow;
 }
 .esfera-vermelha{
-    background-color: red;
     min-height: 150px;
     min-width: 150px;
     border-radius: 500px;
 }
 .esfera-azul{
-    background-color: blue;
     height: 150px;
     width: 150px;
     border-radius: 500px;
@@ -148,13 +154,107 @@ box-shadow: 5px 5px 5px 5px black;
     transform: scaleY(.6) scaleX(.8) rotate(45deg) ;
     position: relative;
 }
-.star {
+.estrela, .estrela-turquia{
     position: absolute;
+    top: 100px;
+    left: 100px;
+}
+.estrela, .estrela-turquia, .estrela-chile, .estrela-eua {
     display: inline-block;
     background-color: white;
     width: 100px;
     height: 100px;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    top: 100px;
-    left: 100px;
-  }
+}
+
+.estrela-turquia{
+    width: 80px;
+    height: 80px;
+    left: 55%;
+    transform: rotate(25deg);
+}
+.estrela-eua{
+    width: 10px;
+    height: 10px;
+}
+.lua, .eclipse{
+    border-radius: 50%;
+    position: absolute; 
+    top: 50%;
+    transform: translate(-40%, -50%);
+}
+.lua{
+    height: 150px;
+    width: 150px;
+}
+
+.eclipse{
+    height: 120px;;
+    width: 120px;
+    left: 65%;
+}
+
+.box-grecia{
+    height: 167px;
+    width: 40%;
+    background-color: #0D5EAF;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.cross-grecia1, .cross-grecia2{
+    height: 1000px;
+    width: 31px;
+}
+
+.cross-grecia2{
+    position: absolute;
+    transform: rotate(90deg);
+}
+
+.fx-grecia{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: repeating-linear-gradient(
+    #0D5EAF 0 11.11%, #fff 11.11% 22.22%)
+}
+
+.Chile{
+    flex-direction: column;
+    position: relative;
+}
+
+.box-chile{
+    flex: 1;
+    position: relative;
+}
+.fx-azul-chile{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.EstadosUnidos{
+    position: relative;
+}
+
+.box-eua{
+    display: flex;
+    height: 50%;
+    width: 50%;
+    background-color: blue;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+}
+.fx-vermelha-eua, .fx-branca-eua{
+    flex: 1;
+}
