@@ -54,7 +54,7 @@ box-shadow: 5px 5px 5px 5px black;
 .fx-azul, .esfera-azul, .fx-azul-chile{
     background-color: blue;
 }
-.fx-branca, .fx-branca-suica, .fx-branca-suica-2, .lua, .cross-grecia1, .cross-grecia2, .box-chile, .fx-branca-eua{
+.fx-branca, .fx-branca-suica, .fx-branca-suica-2, .lua, .cross-grecia1, .cross-grecia2, .box-chile{
     background-color: white;
 }
 .fx-branca-suica {
@@ -67,7 +67,7 @@ box-shadow: 5px 5px 5px 5px black;
     width: 150px;
     height: 40px;
 }
-.fx-vermelha,.fx-vermelha-suica, .fx-vermelha-jordania, .esfera-vermelha, .fx-vermelha-turquia, .eclipse, .fx-vermelha-eua{
+.fx-vermelha,.fx-vermelha-suica, .fx-vermelha-jordania, .esfera-vermelha, .fx-vermelha-turquia, .eclipse{
     background-color: red;
 }
 .fx-vermelha{
@@ -174,8 +174,8 @@ box-shadow: 5px 5px 5px 5px black;
     transform: rotate(25deg);
 }
 .estrela-eua{
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
 }
 .lua, .eclipse{
     border-radius: 50%;
@@ -246,15 +246,22 @@ box-shadow: 5px 5px 5px 5px black;
 }
 
 .box-eua{
-    display: flex;
-    height: 50%;
-    width: 50%;
-    background-color: blue;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    box-sizing: border-box;
     position: absolute;
+    z-index: 1;
+    display: flex;
+    height: calc(100% * 7 / 13);
+    width: 50%;
+    background-color: darkblue;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: calc(100%/50);
+
 }
-.fx-vermelha-eua, .fx-branca-eua{
-    flex: 1;
+
+.linha-estrelas{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
